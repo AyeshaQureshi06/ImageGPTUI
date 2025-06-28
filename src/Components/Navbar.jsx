@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div style={styles.navbar}>
       <h1 style={styles.title}>PixelToProse</h1>
-      {status === 'authenticated' ? (
+      {status === 'authenticated' && (
         <div style={styles.userContainer}>
           <img
             src={session.user?.image || '/default-avatar.png'}
@@ -36,11 +36,8 @@ const Navbar = () => {
             Logout
           </button>
         </div>
-      ) : (
-        <button style={styles.loginButton} onClick={handleLoginClick}>
-          Login
-        </button>
-      )}
+      ) 
+      }
     
     </div>
   );
@@ -52,7 +49,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '10px 20px',
-    backgroundColor: '#520003',
+    backgroundColor: '#5F4B8BFF',
     color: '#3D52A0',
     position: 'fixed',
     top: 0,
@@ -91,7 +88,7 @@ const styles = {
     fontWeight: 'bold',
   },
   logoutButton: {
-    backgroundColor: '#f44336',
+    backgroundColor: '#4B0089',
     color: '#fff',
     border: 'none',
     padding: '5px 10px',
